@@ -41,7 +41,6 @@ export class AppComponent {
     var res = await this.helper.getUrl({ longUrl: this.longUrl });
     if (res && res.success) {
       this.shortUrl = res.data.shortUrl;
-      console.log(res.data);
     } else {
       this.err = res.msg || 'Bad Request!!';
     }
