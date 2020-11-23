@@ -1,4 +1,4 @@
-# UrlShortner
+# Url Shortener
 
 [Live App](https://lil-ly.herokuapp.com/)
 
