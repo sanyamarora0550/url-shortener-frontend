@@ -1,2 +1,8 @@
-.nd-bar{align-content: center;}
-.mat-form-field { display: block; width: 500px;padding-top: 10px;} 
+.nd-bar{align-content:center;justify-content:center}
+.mat-form-field{display:block;width:800px;padding-top:10px}
+.nd-card{display:flex;justify-content:center;width: fit-content;}
+.nd-button{float: right;}
+.nd-spacer{padding: 10px;}
+.nd-contents{display: flex;justify-content: center;}
+.nd-response{display: flex;justify-content: center;padding-top: 30px;}
+.nd-loader{display: flex;justify-content: center;width: 500px;}
