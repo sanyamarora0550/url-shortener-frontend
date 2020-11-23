@@ -6,27 +6,28 @@
   <mat-card class="nd-card">
     <form [formGroup]="form">
       <mat-form-field appearance="outline">
-        <mat-label>Url</mat-label>
-        <input matInput formControlName="url" required>
-        <mat-error align="right">Please provide Valid Url</mat-error>
+        <mat-label>URL</mat-label>
+        <input matInput formControlName="url" required placeholder="Paste Your Long URL Here...">
+        <mat-error align="right">Please Provide Valid URL</mat-error>
       </mat-form-field>
-      <button class="nd-button" mat-raised-button type="submit" [disabled]="form.invalid"
-        (click)="onClick()">Go</button>
+      <button class="nd-button" mat-raised-button type="submit" color="primary" [disabled]="form.invalid"
+        (click)="onClick()">
+        <mat-icon>forward</mat-icon>
+      </button>
     </form>
   </mat-card>
 </div>
 <div class="nd-response">
-  <em>
-    <div class="nd-spacer"></div>
-    <div *ngIf="loading" class="nd-loader">
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </div>
-    <div *ngIf="shortUrl">
-      <mat-label>Short Url: </mat-label>
-      <b> <a href="{{shortUrl}}" target="_blank">{{shortUrl}}</a></b>
-    </div>
-    <div *ngIf="err">
-      <mat-error align="right"><b>{{err}}</b></mat-error>
-    </div>
-  </em>
+  <div class="nd-spacer"></div>
+  <div *ngIf="loading" class="nd-loader">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+  <div *ngIf="shortUrl">
+    <mat-label>Short Url 🧐 : </mat-label>
+    <b> <a href="{{shortUrl}}" target="_blank">{{shortUrl}}</a></b>
+  </div>
+  <div *ngIf="err">
+    <mat-error align="right"><b> <em>{{err}}</em> 😧 </b></mat-error>
+  </div>
+
 </div>
